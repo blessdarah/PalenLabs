@@ -24,7 +24,13 @@ class TestPackageResource extends Resource
         return $form
             ->schema([
                 Forms\Components\Select::make('package_type_id')
-                    ->relationship('type', 'name')
+                    ->relationship('packageType', 'name')
+                    ->preload()
+                    ->searchable()
+                    ->required(),
+                Forms\Components\Select::make('package_category_id')
+                    ->relationship('category', 'name')
+                    ->preload()
                     ->required(),
                 Forms\Components\TextInput::make('name')
                     ->required()
@@ -49,11 +55,12 @@ class TestPackageResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('package_type_id')
-                    ->numeric()
-                    ->sortable(),
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
+                Tables\Columns\TextColumn::make('packageType.name')
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('category.name')
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('description')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('price')
@@ -65,7 +72,8 @@ class TestPackageResource extends Resource
                 Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('deleted_at')
                     ->dateTime()
-                    ->sortable(),
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -97,7 +105,7 @@ class TestPackageResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            RelationManagers\TestsRelationManager::make()
         ];
     }
 

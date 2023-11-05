@@ -2,40 +2,36 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\LabTestResource\Pages;
-use App\Filament\Resources\LabTestResource\RelationManagers;
-use App\Models\LabTest;
+use App\Filament\Resources\CategoryResource\Pages;
+use App\Filament\Resources\CategoryResource\RelationManagers;
+use App\Models\Category;
 use Filament\Forms;
-use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use Filament\Tables\Columns\ImageColumn;
-use Filament\Tables\Columns\TagsColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class LabTestResource extends Resource
+class CategoryResource extends Resource
 {
-    protected static ?string $model = LabTest::class;
+    protected static ?string $model = Category::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $label = "Test category";
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                TextInput::make('name')->required(),
-                TextInput::make('shortName'),
-                Select::make('category_id')->relationship('category', 'name')
-                    ->preload()
-                    ->searchable(),
-                TextInput::make('description')->required(),
-                FileUpload::make('image')->preserveFilenames(),
+                TextInput::make('name')->required()->maxLength(50),
+                Select::make('parent_id')
+                    ->relationship('parent', 'name')
+                    ->label("Parent category")
+                    ->preload(),
             ]);
     }
 
@@ -43,11 +39,8 @@ class LabTestResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name')->searchable()->sortable(),
-                TextColumn::make('shortName')->searchable()->sortable(),
-                TextColumn::make('category.name'),
-                TextColumn::make('description')->searchable(),
-                ImageColumn::make('image'),
+                TextColumn::make('name'),
+                TextColumn::make('parent.name')->label("Parent")
             ])
             ->filters([
                 Tables\Filters\TrashedFilter::make(),
@@ -78,10 +71,10 @@ class LabTestResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListLabTests::route('/'),
-            'create' => Pages\CreateLabTest::route('/create'),
-            'view' => Pages\ViewLabTest::route('/{record}'),
-            'edit' => Pages\EditLabTest::route('/{record}/edit'),
+            'index' => Pages\ListCategories::route('/'),
+            'create' => Pages\CreateCategory::route('/create'),
+            'view' => Pages\ViewCategory::route('/{record}'),
+            'edit' => Pages\EditCategory::route('/{record}/edit'),
         ];
     }
 

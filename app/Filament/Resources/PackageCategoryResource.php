@@ -2,26 +2,20 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\LabTestResource\Pages;
-use App\Filament\Resources\LabTestResource\RelationManagers;
-use App\Models\LabTest;
+use App\Filament\Resources\PackageCategoryResource\Pages;
+use App\Filament\Resources\PackageCategoryResource\RelationManagers;
+use App\Models\PackageCategory;
 use Filament\Forms;
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use Filament\Tables\Columns\ImageColumn;
-use Filament\Tables\Columns\TagsColumn;
-use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class LabTestResource extends Resource
+class PackageCategoryResource extends Resource
 {
-    protected static ?string $model = LabTest::class;
+    protected static ?string $model = PackageCategory::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -29,13 +23,9 @@ class LabTestResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name')->required(),
-                TextInput::make('shortName'),
-                Select::make('category_id')->relationship('category', 'name')
-                    ->preload()
-                    ->searchable(),
-                TextInput::make('description')->required(),
-                FileUpload::make('image')->preserveFilenames(),
+                Forms\Components\TextInput::make('name')
+                    ->required()
+                    ->maxLength(255),
             ]);
     }
 
@@ -43,11 +33,19 @@ class LabTestResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name')->searchable()->sortable(),
-                TextColumn::make('shortName')->searchable()->sortable(),
-                TextColumn::make('category.name'),
-                TextColumn::make('description')->searchable(),
-                ImageColumn::make('image'),
+                Tables\Columns\TextColumn::make('name')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('created_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('updated_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('deleted_at')
+                    ->dateTime()
+                    ->sortable(),
             ])
             ->filters([
                 Tables\Filters\TrashedFilter::make(),
@@ -67,24 +65,24 @@ class LabTestResource extends Resource
                 Tables\Actions\CreateAction::make(),
             ]);
     }
-
+    
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-
+    
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListLabTests::route('/'),
-            'create' => Pages\CreateLabTest::route('/create'),
-            'view' => Pages\ViewLabTest::route('/{record}'),
-            'edit' => Pages\EditLabTest::route('/{record}/edit'),
+            'index' => Pages\ListPackageCategories::route('/'),
+            'create' => Pages\CreatePackageCategory::route('/create'),
+            'view' => Pages\ViewPackageCategory::route('/{record}'),
+            'edit' => Pages\EditPackageCategory::route('/{record}/edit'),
         ];
-    }
-
+    }    
+    
     public static function getEloquentQuery(): Builder
     {
         return parent::getEloquentQuery()
