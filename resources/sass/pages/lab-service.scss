@@ -1,0 +1,64 @@
+.lab-container {
+    .nav-tabs {
+        .nav-item .nav-link {
+            &.active {
+                border-bottom: 3px solid $primary !important;
+            }
+        }
+    }
+    .accordion-container {
+        .accordion-card-item {
+            .package-list-1 {
+                list-style: none;
+                color: $dark;
+                padding-left: 13px !important;
+
+                & li:before {
+                    content: "⬢";
+                    color: $green;
+                    display: inline-block;
+                    margin-left: -1em;
+                    margin-right: 0.5em;
+                    width: 1em;
+                    text-align: center;
+                }
+            }
+
+            .package-list-2 {
+                list-style: none;
+                color: $dark;
+                padding-left: 13px !important;
+
+                & li:before {
+                    content: "⬢";
+                    color: $warning;
+                    display: inline-block;
+                    margin-left: -1em;
+                    margin-right: 0.5em;
+                    width: 1em;
+                    text-align: center;
+                }
+            }
+
+            .package-list-3 {
+                list-style: none;
+                color: $dark;
+                padding-left: 13px !important;
+
+                & li:before {
+                    content: "⬢";
+                    color: $purple;
+                    display: inline-block;
+                    margin-left: -1em;
+                    margin-right: 0.5em;
+                    width: 1em;
+                    text-align: center;
+                }
+            }
+
+            .btn-pck-3 {
+                background: $purple;
+            }
+        }
+    }
+}

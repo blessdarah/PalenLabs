@@ -4,6 +4,7 @@
 // Variables
 @import "variables";
 @import "font-size";
+@import "utility-class";
 // Bootstrap
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.css";
@@ -11,6 +12,9 @@
 @import "components/banner";
 @import "components/footer";
 
+
+// pages
+@import "pages/lab-service.scss";
 .app-container {
     min-height: 70vh;
     background: $white;
@@ -183,9 +187,3 @@
         }
     }
 }
-
-// .package-container {
-//     h2 {
-//         color: $primary;
-//     }
-// }
