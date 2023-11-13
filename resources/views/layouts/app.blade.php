@@ -56,7 +56,8 @@
                             <a class="nav-link" aria-current="page" href="/medicals">Medicals</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-primary text-white" role="button" aria-current="page" href="/book-a-test">Book a Test</a>
+                            <a class="btn btn-primary text-white" role="button" aria-current="page"
+                                href="/book-a-test">Book a Test</a>
                         </li>
                         <!-- Authentication Links -->
                         {{-- @guest
@@ -100,6 +101,14 @@
             @yield('content')
         </main>
 
+        {{-- support --}}
+        <div class="support-container bg-primary mt-5">
+            <div class="container px-0 px-lg-5 py-3 text-white">
+                <div class="text-center">
+                    <h2 class="fw-bold">If you need support? Call Us at +237 678 47 86 54</h2>
+                </div>
+            </div>
+        </div>
         <footer class="bg-dark text-white pt-5">
             <div class="container app-footer">
                 <div class="row">
