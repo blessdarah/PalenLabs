@@ -23,8 +23,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{-- {{ config('app.name', 'Laravel') }} --}}
-                    <img src="{{ asset('PNG/Palen Diagnostics_Color Logo.png') }}" alt="" width="100" height="50">
+                    <img src="{{ asset('PNG/Palen Diagnostics_Color Logo.png') }}" alt="" width="120" height="50">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
