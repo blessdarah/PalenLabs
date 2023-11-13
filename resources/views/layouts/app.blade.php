@@ -47,7 +47,7 @@
                             <a class="nav-link" aria-current="page" href="/lab-services">Lab Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/for-doctors">For doctors</a>
+                            <a class="nav-link" aria-current="page" href="/doctors">Doctors</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="/partners">Partners</a>

@@ -21,9 +21,23 @@ Route::get('/lab-services', function () {
     return view('lab-services');
 });
 
+Route::get('/lab-tests', function () {
+    return view('lab-tests');
+});
+
+
 Route::get('/doctors', function () {
     return view('doctors');
 });
+
+Route::get('/medicals', function () {
+    return view('medicals');
+});
+
+Route::get('/partners', function () {
+    return view('partners');
+});
+
 
 Auth::routes();
 
