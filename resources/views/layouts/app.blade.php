@@ -23,8 +23,8 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{-- {{ config('app.name', 'Laravel') }} --}}
-                    <img src="{{ asset('PNG/Palen Diagnostics_Color Logo.png') }}" alt="" width="100" height="50">
+                    <img src="{{ asset('PNG/Palen Diagnostics_Color Logo.png') }}" alt="" width="140"
+                        height="55">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -34,14 +34,32 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
+                    {{-- <ul class="navbar-nav me-auto">
 
-                    </ul>
+                    </ul> --}}
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/about-us">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/lab-services">Lab Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/for-doctors">For doctors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/partners">Partners</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/medicals">Medicals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary text-white" role="button" aria-current="page" href="/book-a-test">Book a Test</a>
+                        </li>
                         <!-- Authentication Links -->
-                        @guest
+                        {{-- @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -72,20 +90,20 @@
                                     </form>
                                 </div>
                             </li>
-                        @endguest
+                        @endguest --}}
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <main class="py-4 app-container">
+        <main class="app-container">
             @yield('content')
         </main>
 
         <footer class="bg-dark text-white pt-5">
             <div class="container app-footer">
                 <div class="row">
-                    <div class="col-6 col-md-3 mb-3">
+                    <div class="col-6 col-md-4 mb-3">
                         <h5>Product</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item mb-2"><a href="#"
@@ -105,7 +123,7 @@
                         </ul>
                     </div>
 
-                    <div class="col-6 col-md-3 mb-3">
+                    <div class="col-6 col-md-4 mb-3">
                         <h5>Company</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item mb-2"><a href="#"
@@ -125,7 +143,7 @@
                         </ul>
                     </div>
 
-                    <div class="col-6 col-md-3 mb-3">
+                    <div class="col-6 col-md-4 mb-3">
                         <h5>Legal</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item mb-2"><a href="#"
@@ -142,18 +160,6 @@
                             <li class="nav-item mb-2"><a href="#"
                                     class="nav-link p-0 text-body-secondary">About</a></li>
                         </ul>
-                    </div>
-
-                    <div class="col-md-3 mb-3">
-                        <h5>Install App</h5>
-                        {{-- first --}}
-                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-
-                        </div>
-                        {{-- second --}}
-                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-
-                        </div>
                     </div>
                 </div>
 
