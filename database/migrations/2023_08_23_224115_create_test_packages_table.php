@@ -13,6 +13,7 @@ return new class () extends Migration {
         Schema::create('test_packages', function (Blueprint $table) {
             $table->id();
             $table->foreignId('package_type_id');
+            $table->foreignId('package_category_id');
 
             $table->string('name');
             $table->string('description');
@@ -20,6 +21,7 @@ return new class () extends Migration {
             $table->string('theme');
             $table->string('icon')->nullable();
             $table->string('image')->nullable();
+            $table->mediumText('comment')->nullable();
 
             $table->softDeletes();
             $table->timestamps();

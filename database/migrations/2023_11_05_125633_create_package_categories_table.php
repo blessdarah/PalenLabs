@@ -10,15 +10,11 @@ return new class () extends Migration {
      */
     public function up(): void
     {
-        Schema::create('lab_tests', function (Blueprint $table) {
+        Schema::create('package_categories', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('category_id');
             $table->string('name');
-            $table->string('shortName')->nullable();
-            $table->string('description');
-            $table->string('image')->nullable();
-            $table->softDeletes();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -27,6 +23,6 @@ return new class () extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('lab_tests');
+        Schema::dropIfExists('package_categories');
     }
 };
