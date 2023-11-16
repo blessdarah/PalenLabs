@@ -1,6 +1,6 @@
 <x-layouts.app>
     <div class="container-fluid p-0 app-banner">
-        {{-- @yield('banner') --}}
+        <x-banner />
 
         {{-- packages --}}
         <div class="container px-0 px-lg-5 mb-5 package-container">
