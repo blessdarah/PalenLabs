@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,32 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::controller(PagesController::class)->group(function () {
+    Route::get('/', 'index');
+    Route::get('/lab-tests', 'labTests');
+    Route::get('/lab-services', 'labServices');
 });
 
-Route::get('/lab-services', function () {
-    return view('lab-services');
-});
-
-Route::get('/lab-tests', function () {
-    return view('lab-tests');
-});
-
-
-Route::get('/doctors', function () {
-    return view('doctors');
-});
-
-Route::get('/medicals', function () {
-    return view('medicals');
-});
-
-Route::get('/partners', function () {
-    return view('partners');
-});
-
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+require __DIR__ . '/auth.php';

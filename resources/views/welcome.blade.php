@@ -1,9 +1,6 @@
-@extends('layouts.app')
-@include('components.banner')
-
-@section('content')
+<x-layouts.app>
     <div class="container-fluid p-0 app-banner">
-        @yield('banner')
+        <x-banner />
 
         {{-- packages --}}
         <div class="container px-0 px-lg-5 mb-5 package-container">
@@ -57,7 +54,8 @@
                                 <li>Comprehensive</li>
                             </ul>
                             <p class="small package-detail">
-                                A pre-wedding health screening provides you with information on health compatibility between
+                                A pre-wedding health screening provides you with information on health compatibility
+                                between
                                 couples. Get tested at home, and a doctor will analyze the results with you and your
                                 partner.
                             </p>
@@ -83,7 +81,8 @@
                                 <li>Comprehensive</li>
                             </ul>
                             <p class="small package-detail">
-                                A pre-wedding health screening provides you with information on health compatibility between
+                                A pre-wedding health screening provides you with information on health compatibility
+                                between
                                 couples. Get tested at home, and a doctor will analyze the results with you and your
                                 partner.
                             </p>
@@ -106,7 +105,8 @@
                             <div class="card-body bg-white">
                                 <h6 class="card-title fw-bold">Trusted Labs</h6>
                                 <p class="small review-detail">
-                                    Every test booked via Palen Health is conducted by certified labs that are 100% verified
+                                    Every test booked via Palen Health is conducted by certified labs that are 100%
+                                    verified
                                     and trustworthy.
                                 </p>
                             </div>
@@ -122,7 +122,8 @@
                             <div class="card-body bg-white">
                                 <h6 class="card-title fw-bold">Home Visit</h6>
                                 <p class="small review-detail">
-                                    With Palen Health, you get a FREE sample pick-up by professional phlebotomists from your
+                                    With Palen Health, you get a FREE sample pick-up by professional phlebotomists from
+                                    your
                                     home or preferred location.
                                 </p>
                             </div>
@@ -138,7 +139,8 @@
                             <div class="card-body bg-white">
                                 <h6 class="card-title fw-bold">Timely and Accurate Reports</h6>
                                 <p class="small review-detail">
-                                    Once collected, samples will be sent to labs for processing. Detailed reports will be
+                                    Once collected, samples will be sent to labs for processing. Detailed reports will
+                                    be
                                     shared within a stipulated timeline.
                                 </p>
                             </div>
@@ -171,13 +173,16 @@
                                         <div class="card-body bg-white">
                                             <h6 class="card-title fw-bold">Doctors</h6>
                                             <p class="small partner-detail">
-                                                Are you a medical doctor offering practice to your patients?. Let us assist
+                                                Are you a medical doctor offering practice to your patients?. Let us
+                                                assist
                                                 you
-                                                to extend the scale of your practice. We will keep the quality of practice
+                                                to extend the scale of your practice. We will keep the quality of
+                                                practice
                                                 at
                                                 best while you keep your patients happy.
                                             </p>
-                                            <button type="button" class="btn btn-primary text-white">Task to Us</button>
+                                            <button type="button" class="btn btn-primary text-white">Task to
+                                                Us</button>
                                         </div>
                                     </div>
                                 </div>
@@ -190,11 +195,13 @@
                                             <p class="small partner-detail">
                                                 Working with us will extend the services of your existing laboratory.
                                                 Partnering
-                                                with us at Palen Health with help you serve more patients and increase your
+                                                with us at Palen Health with help you serve more patients and increase
+                                                your
                                                 list
                                                 of service offers to patients.
                                             </p>
-                                            <button type="button" class="btn btn-primary text-white">Task to Us</button>
+                                            <button type="button" class="btn btn-primary text-white">Task to
+                                                Us</button>
                                         </div>
                                     </div>
                                 </div>
@@ -205,12 +212,16 @@
                                         <div class="card-body bg-white">
                                             <h6 class="card-title fw-bold">Businesses and Corporates</h6>
                                             <p class="small partner-detail">
-                                                The health and stability of any business is determine by the health of its
-                                                personnel. We accompany businesses to ensure they hire healthy personnel and
-                                                keep them healthy to ensure optimum performance, we provide pre-employment
+                                                The health and stability of any business is determine by the health of
+                                                its
+                                                personnel. We accompany businesses to ensure they hire healthy personnel
+                                                and
+                                                keep them healthy to ensure optimum performance, we provide
+                                                pre-employment
                                                 packages and staff welfare packages.
                                             </p>
-                                            <button type="button" class="btn btn-primary text-white">Task to Us</button>
+                                            <button type="button" class="btn btn-primary text-white">Task to
+                                                Us</button>
                                         </div>
                                     </div>
                                 </div>
@@ -242,7 +253,8 @@
                                 <div id="flush-collapseOne"
                                     class="accordion-collapse collapse show bg-white border border-primary"
                                     aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">Placeholder content for this accordion, which is intended
+                                    <div class="accordion-body">Placeholder content for this accordion, which is
+                                        intended
                                         to demonstrate the <code>.accordion-flush</code> class. This is the first item's
                                         accordion body.</div>
                                 </div>
@@ -258,8 +270,10 @@
                                 <div id="flush-collapseTwo"
                                     class="accordion-collapse collapse bg-white border border-primary"
                                     aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">Placeholder content for this accordion, which is intended
-                                        to demonstrate the <code>.accordion-flush</code> class. This is the second item's
+                                    <div class="accordion-body">Placeholder content for this accordion, which is
+                                        intended
+                                        to demonstrate the <code>.accordion-flush</code> class. This is the second
+                                        item's
                                         accordion body. Let's imagine this being filled with some actual content.</div>
                                 </div>
                             </div>
@@ -274,9 +288,11 @@
                                 <div id="flush-collapseThree"
                                     class="accordion-collapse collapse bg-white border border-primary"
                                     aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">Placeholder content for this accordion, which is intended
+                                    <div class="accordion-body">Placeholder content for this accordion, which is
+                                        intended
                                         to demonstrate the <code>.accordion-flush</code> class. This is the third item's
-                                        accordion body. Nothing more exciting happening here in terms of content, but just
+                                        accordion body. Nothing more exciting happening here in terms of content, but
+                                        just
                                         filling up the space to make it look, at least at first glance, a bit more
                                         representative of how this would look in a real-world application.</div>
                                 </div>
@@ -292,9 +308,11 @@
                                 <div id="flush-collapseThree"
                                     class="accordion-collapse collapse bg-white border border-primary"
                                     aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">Placeholder content for this accordion, which is intended
+                                    <div class="accordion-body">Placeholder content for this accordion, which is
+                                        intended
                                         to demonstrate the <code>.accordion-flush</code> class. This is the third item's
-                                        accordion body. Nothing more exciting happening here in terms of content, but just
+                                        accordion body. Nothing more exciting happening here in terms of content, but
+                                        just
                                         filling up the space to make it look, at least at first glance, a bit more
                                         representative of how this would look in a real-world application.</div>
                                 </div>
@@ -310,9 +328,11 @@
                                 <div id="flush-collapseThree"
                                     class="accordion-collapse collapse bg-white border border-primary"
                                     aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">Placeholder content for this accordion, which is intended
+                                    <div class="accordion-body">Placeholder content for this accordion, which is
+                                        intended
                                         to demonstrate the <code>.accordion-flush</code> class. This is the third item's
-                                        accordion body. Nothing more exciting happening here in terms of content, but just
+                                        accordion body. Nothing more exciting happening here in terms of content, but
+                                        just
                                         filling up the space to make it look, at least at first glance, a bit more
                                         representative of how this would look in a real-world application.</div>
                                 </div>
@@ -323,4 +343,4 @@
             </div>
         </div>
     </div>
-@endsection
+</x-layouts.app>

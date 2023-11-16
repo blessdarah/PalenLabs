@@ -1,12 +1,11 @@
-@extends('layouts.app')
-
-@section('content')
+<x-layouts.app>
     {{-- partner --}}
     <div class="lab-container">
         <div class="container px-0 px-lg-5 py-5 mb-5">
             <div class="row justify-content-center align-items-center">
                 <div class="col-12 col-md-8 pt-5 text-center">
-                    <h2 class="fw-bold">All Your medial tests done from the comfort of your home, office or onsite laboratory
+                    <h2 class="fw-bold">All Your medial tests done from the comfort of your home, office or onsite
+                        laboratory
                     </h2>
                     <p class="small">Tests done professionally, privately and results are confidential</p>
                 </div>
@@ -23,9 +22,9 @@
                                 aria-controls="package" aria-selected="true">Test packages</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link rounded-0 border-0 bg-transparent" id="test-tab" data-bs-toggle="tab"
-                                data-bs-target="#test" type="button" role="tab" aria-controls="test"
-                                aria-selected="false">List of tests</button>
+                            <button class="nav-link rounded-0 border-0 bg-transparent" id="test-tab"
+                                data-bs-toggle="tab" data-bs-target="#test" type="button" role="tab"
+                                aria-controls="test" aria-selected="false">List of tests</button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link rounded-0 border-0 bg-transparent" id="ultrasound-tab"
@@ -33,9 +32,9 @@
                                 aria-controls="ultrasound" aria-selected="false">Ultrasounds</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link rounded-0 border-0 bg-transparent" id="x-ray-tab" data-bs-toggle="tab"
-                                data-bs-target="#x-ray" type="button" role="tab" aria-controls="x-ray"
-                                aria-selected="false">X-ray scans</button>
+                            <button class="nav-link rounded-0 border-0 bg-transparent" id="x-ray-tab"
+                                data-bs-toggle="tab" data-bs-target="#x-ray" type="button" role="tab"
+                                aria-controls="x-ray" aria-selected="false">X-ray scans</button>
                         </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
@@ -137,13 +136,15 @@
                                                     <div class="col-11">
                                                         <strong>The Palen Health Full Body Checkup is ideal for you
                                                             if</strong>
-                                                        <p>Walking down the aisle and saying I do to the love of your life
+                                                        <p>Walking down the aisle and saying I do to the love of your
+                                                            life
                                                             with
                                                             full
                                                             confidence sets the pace for a fruitful marriage filled with
                                                             love
                                                             and
-                                                            long life. The Premarital package is designed to suit the need
+                                                            long life. The Premarital package is designed to suit the
+                                                            need
                                                             and
                                                             budget of everyone</p>
                                                     </div>
@@ -154,9 +155,10 @@
                                 </div>
                                 <div class="accordion-item mb-2 border-0">
                                     <h2 class="accordion-header" id="flush-headingTwo">
-                                        <button class="accordion-button collapsed fw-bold bg-primary text-white" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
-                                            aria-expanded="false" aria-controls="flush-collapseTwo">
+                                        <button class="accordion-button collapsed fw-bold bg-primary text-white"
+                                            type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                            aria-controls="flush-collapseTwo">
                                             Full body checkup
                                         </button>
                                     </h2>
@@ -167,14 +169,16 @@
                                             intended
                                             to demonstrate the <code>.accordion-flush</code> class. This is the second
                                             item's
-                                            accordion body. Let's imagine this being filled with some actual content.</div>
+                                            accordion body. Let's imagine this being filled with some actual content.
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item mb-2 border-0">
                                     <h2 class="accordion-header" id="flush-headingThree">
-                                        <button class="accordion-button collapsed fw-bold bg-primary text-white" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
-                                            aria-expanded="false" aria-controls="flush-collapseThree">
+                                        <button class="accordion-button collapsed fw-bold bg-primary text-white"
+                                            type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                            aria-controls="flush-collapseThree">
                                             STDs
                                         </button>
                                     </h2>
@@ -183,8 +187,10 @@
                                         aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">Placeholder content for this accordion, which is
                                             intended
-                                            to demonstrate the <code>.accordion-flush</code> class. This is the third item's
-                                            accordion body. Nothing more exciting happening here in terms of content, but
+                                            to demonstrate the <code>.accordion-flush</code> class. This is the third
+                                            item's
+                                            accordion body. Nothing more exciting happening here in terms of content,
+                                            but
                                             just
                                             filling up the space to make it look, at least at first glance, a bit more
                                             representative of how this would look in a real-world application.</div>
@@ -192,9 +198,10 @@
                                 </div>
                                 <div class="accordion-item mb-2 border-0">
                                     <h2 class="accordion-header" id="flush-headingThree">
-                                        <button class="accordion-button collapsed fw-bold bg-primary text-white" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
-                                            aria-expanded="false" aria-controls="flush-collapseThree">
+                                        <button class="accordion-button collapsed fw-bold bg-primary text-white"
+                                            type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                            aria-controls="flush-collapseThree">
                                             Pre-employment screening
                                         </button>
                                     </h2>
@@ -203,8 +210,10 @@
                                         aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">Placeholder content for this accordion, which is
                                             intended
-                                            to demonstrate the <code>.accordion-flush</code> class. This is the third item's
-                                            accordion body. Nothing more exciting happening here in terms of content, but
+                                            to demonstrate the <code>.accordion-flush</code> class. This is the third
+                                            item's
+                                            accordion body. Nothing more exciting happening here in terms of content,
+                                            but
                                             just
                                             filling up the space to make it look, at least at first glance, a bit more
                                             representative of how this would look in a real-world application.</div>
@@ -212,9 +221,10 @@
                                 </div>
                                 <div class="accordion-item mb-2 border-0">
                                     <h2 class="accordion-header" id="flush-headingThree">
-                                        <button class="accordion-button collapsed fw-bold bg-primary text-white" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
-                                            aria-expanded="false" aria-controls="flush-collapseThree">
+                                        <button class="accordion-button collapsed fw-bold bg-primary text-white"
+                                            type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                            aria-controls="flush-collapseThree">
                                             Fertility checkup
                                         </button>
                                     </h2>
@@ -223,8 +233,10 @@
                                         aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">Placeholder content for this accordion, which is
                                             intended
-                                            to demonstrate the <code>.accordion-flush</code> class. This is the third item's
-                                            accordion body. Nothing more exciting happening here in terms of content, but
+                                            to demonstrate the <code>.accordion-flush</code> class. This is the third
+                                            item's
+                                            accordion body. Nothing more exciting happening here in terms of content,
+                                            but
                                             just
                                             filling up the space to make it look, at least at first glance, a bit more
                                             representative of how this would look in a real-world application.</div>
@@ -232,7 +244,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade p-3" id="test" role="tabpanel" aria-labelledby="test-tab">Lorem
+                        <div class="tab-pane fade p-3" id="test" role="tabpanel" aria-labelledby="test-tab">
+                            Lorem
                             ipsum
                             dolor
                             sit amet consectetur adipisicing elit. Vero ipsa dolorem repellendus ducimus eos fugit minus
@@ -250,7 +263,8 @@
                             nostrum
                             vitae,
                             assumenda dignissimos eos rem sapiente quasi distinctio, quo autem cupiditate earum!</div>
-                        <div class="tab-pane fade p-3" id="ultrasound" role="tabpanel" aria-labelledby="ultrasound-tab">
+                        <div class="tab-pane fade p-3" id="ultrasound" role="tabpanel"
+                            aria-labelledby="ultrasound-tab">
                             Lorem
                             ipsum
                             dolor
@@ -262,7 +276,8 @@
                             corporis
                             tempore
                             dolor, quam ex necessitatibus.</div>
-                        <div class="tab-pane fade p-3" id="x-ray" role="tabpanel" aria-labelledby="x-ray-tab">Lorem
+                        <div class="tab-pane fade p-3" id="x-ray" role="tabpanel" aria-labelledby="x-ray-tab">
+                            Lorem
                             ipsum
                             dolor
                             sit amet consectetur adipisicing elit. Animi cum debitis recusandae sequi dicta numquam
@@ -278,4 +293,4 @@
             </div>
         </div>
     </div>
-@endsection
+</x-layouts.app>

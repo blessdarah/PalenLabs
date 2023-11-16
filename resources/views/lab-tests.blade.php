@@ -1,12 +1,11 @@
-@extends('layouts.app')
-
-@section('content')
+<x-layouts.app>
     {{-- partner --}}
     <div class="lab-container">
         <div class="container px-0 px-lg-5 py-5 mb-5">
             <div class="row justify-content-center align-items-center">
                 <div class="col-12 col-md-8 pt-5 text-center">
-                    <h2 class="fw-bold">All Your medial tests done from the comfort of your home, office or onsite laboratory
+                    <h2 class="fw-bold">All Your medial tests done from the comfort of your home, office or onsite
+                        laboratory
                     </h2>
                     <p class="small">Tests done professionally, privately and results are confidential</p>
                 </div>
@@ -18,9 +17,9 @@
                 <div class="card bg-white rounded-0">
                     <ul class="nav nav-tabs bg-white" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link rounded-0 border-0 bg-transparent" id="package-tab" data-bs-toggle="tab"
-                                data-bs-target="#package" type="button" role="tab" aria-controls="package"
-                                aria-selected="true">Test packages</button>
+                            <button class="nav-link rounded-0 border-0 bg-transparent" id="package-tab"
+                                data-bs-toggle="tab" data-bs-target="#package" type="button" role="tab"
+                                aria-controls="package" aria-selected="true">Test packages</button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active rounded-0 border-0 bg-transparent" id="test-tab"
@@ -47,7 +46,8 @@
                                                         Digital X-ray
                                                     </h6>
                                                     <p>
-                                                        Sportsman do offending supported extremity breakfast by listening.
+                                                        Sportsman do offending supported extremity breakfast by
+                                                        listening.
                                                         Decisively advantages nor expression unpleasing she led met
                                                     </p>
                                                     <a href="#" class="nav-link text-primary">learn more</a>
@@ -63,4 +63,4 @@
             </div>
         </div>
     </div>
-@endsection
+</x-layouts.app>
