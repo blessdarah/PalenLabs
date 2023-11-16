@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::controller(PagesController::class)->group(function () {
+    Route::get('/', 'index');
+    Route::get('/lab-tests', 'labTests');
+    Route::get('/lab-services', 'labServices');
 });
+
 
 require __DIR__.'/auth.php';
