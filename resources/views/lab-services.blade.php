@@ -12,7 +12,7 @@
             </div>
         </div>
 
-        <div class="row justify-content-center align-items center ">
+        <div class="row justify-content-center align-items center pb-5">
             <div class="col-11 col-md-10">
                 <div class="card bg-white rounded-0">
                     <ul class="nav nav-tabs bg-white" id="myTab" role="tablist">
@@ -277,17 +277,31 @@
                             tempore
                             dolor, quam ex necessitatibus.</div>
                         <div class="tab-pane fade p-3" id="x-ray" role="tabpanel" aria-labelledby="x-ray-tab">
-                            Lorem
-                            ipsum
-                            dolor
-                            sit amet consectetur adipisicing elit. Animi cum debitis recusandae sequi dicta numquam
-                            deleniti
-                            voluptate soluta modi dolor, ut totam dolorum ipsam optio possimus suscipit natus enim error
-                            deserunt in
-                            minima nihil eaque! At nulla temporibus dolorem, ullam voluptatem fugit assumenda quo
-                            corporis
-                            tempore
-                            dolor, quam ex necessitatibus.</div>
+                            <div class="row justify-content-center align-items-start">
+                                @for ($i = 0; $i < 8; $i++)
+                                    <div class="col-12 col-md-6">
+                                        <div class="card border-0">
+                                            <div class="card-body d-flex justify-content-space-between">
+                                                <div class="card-header border-0 rounded-2 w-25 pr-2">
+
+                                                </div>
+                                                <div>
+                                                    <h6 class="card-title">
+                                                        Digital X-ray
+                                                    </h6>
+                                                    <p>
+                                                        Sportsman do offending supported extremity breakfast by
+                                                        listening.
+                                                        Decisively advantages nor expression unpleasing she led met
+                                                    </p>
+                                                    <a href="#" class="nav-link text-primary">learn more</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endfor
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
