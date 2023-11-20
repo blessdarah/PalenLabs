@@ -18,6 +18,8 @@ Route::controller(PagesController::class)->group(function () {
     Route::get('/', 'index');
     Route::get('/lab-tests', 'labTests');
     Route::get('/lab-services', 'labServices');
+    Route::get('/doctors', 'doctors');
+    Route::get('/partners', 'partners');
 });
 
 require __DIR__ . '/auth.php';
