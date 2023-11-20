@@ -12,7 +12,7 @@ class PagesController extends Controller
         return view('welcome');
     }
 
-    public function labTests(): View
+    public function labTests()
     {
         return view('lab-tests');
     }

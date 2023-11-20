@@ -28,9 +28,7 @@
                                 </ul>
                                 <p class="small package-detail">
                                     A pre-wedding health screening provides you with information on health compatibility
-                                    between
-                                    couples. Get tested at home, and a doctor will analyze the results with you and your
-                                    partner.
+                                    between couples. Get tested at home, and a doctor will analyze the results with you and your partner.
                                 </p>
                                 <button type="button" class="btn btn-primary text-white my-3">Choose Me</button>
                         </div>
@@ -55,9 +53,7 @@
                             </ul>
                             <p class="small package-detail">
                                 A pre-wedding health screening provides you with information on health compatibility
-                                between
-                                couples. Get tested at home, and a doctor will analyze the results with you and your
-                                partner.
+                                between couples. Get tested at home, and a doctor will analyze the results with you and your partner.
                             </p>
                             <button type="button" class="btn btn-primary text-white my-3">Choose Me</button>
                         </div>
@@ -329,11 +325,9 @@
                                     class="accordion-collapse collapse bg-white border border-primary"
                                     aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                                     <div class="accordion-body">Placeholder content for this accordion, which is
-                                        intended
-                                        to demonstrate the <code>.accordion-flush</code> class. This is the third item's
+                                        intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's
                                         accordion body. Nothing more exciting happening here in terms of content, but
-                                        just
-                                        filling up the space to make it look, at least at first glance, a bit more
+                                        just filling up the space to make it look, at least at first glance, a bit more
                                         representative of how this would look in a real-world application.</div>
                                 </div>
                             </div>
