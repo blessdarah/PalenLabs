@@ -26,4 +26,9 @@ class PagesController extends Controller
     {
         return view('partners');
     }
+
+    public function aboutUs(): View
+    {
+        return view('about-us');
+    }
 }
