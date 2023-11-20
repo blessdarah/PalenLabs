@@ -21,4 +21,14 @@ class PagesController extends Controller
     {
         return view('lab-services');
     }
+
+    public function doctors(): View
+    {
+        return view('doctors');
+    }
+
+    public function partners(): View
+    {
+        return view('partners');
+    }
 }
