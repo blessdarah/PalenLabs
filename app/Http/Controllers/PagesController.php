@@ -12,7 +12,7 @@ class PagesController extends Controller
         return view('welcome');
     }
 
-    public function labTests()
+    public function labTests(): View
     {
         return view('lab-tests');
     }
@@ -20,5 +20,20 @@ class PagesController extends Controller
     public function labServices(): View
     {
         return view('lab-services');
+    }
+
+    public function doctors(): View
+    {
+        return view('doctors');
+    }
+
+    public function partners(): View
+    {
+        return view('partners');
+    }
+
+    public function aboutUs(): View
+    {
+        return view('about-us');
     }
 }

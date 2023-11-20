@@ -16,8 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(PagesController::class)->group(function () {
     Route::get('/', 'index');
-    Route::get('/lab-tests', 'labTests');
     Route::get('/lab-services', 'labServices');
+    Route::get('/doctors', 'doctors');
+    Route::get('/partners', 'partners');
+    Route::get('/about-us', 'aboutUs');
 });
 
 require __DIR__ . '/auth.php';
