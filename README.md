@@ -1,31 +1,13 @@
-# Models
-
-## TestPackage
-
--   name
--   description
--   price
--   type
--   theme
--   icon
--   image
--   labTests
-
-## LabTest
-
--   name
--   shortName
--   description
--   price
--   icon
--   image
-
-### Shield
+### Configure admin configurations
 
 **Generate permissions**
 
 ```bash
   php artisan shield:generate --all
+```
+**Create a new admin user**
+```bash
+    php artisan make:filament-user
 ```
 
 **Configure default user**
