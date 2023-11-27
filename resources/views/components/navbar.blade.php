@@ -31,10 +31,6 @@
                         href="/partners">Partners</a>
                 </li>
                 <li class="nav-item fw-normal">
-                    <a class="nav-link {{ Request::is('medicals') ? 'active' : '' }}" aria-current="page"
-                        href="/medicals">Medicals</a>
-                </li>
-                <li class="nav-item fw-normal">
                     <a class="btn btn-primary text-white" role="button" aria-current="page" href="/book-a-test">Book a
                         Test</a>
                 </li>
