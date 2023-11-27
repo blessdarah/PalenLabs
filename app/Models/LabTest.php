@@ -14,7 +14,7 @@ class LabTest extends Model
 
     protected $fillable = [
        "name",
-        "category_id",
+       "category_id",
        "shortName",
        "description",
        "price",

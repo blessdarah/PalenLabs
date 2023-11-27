@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\LabTest;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +13,6 @@ class LabTestSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        LabTest::factory()->count(32)->create();
     }
 }

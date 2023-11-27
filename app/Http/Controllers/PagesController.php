@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\PackageType;
+use App\Models\TestPackage;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -19,7 +21,9 @@ class PagesController extends Controller
 
     public function labServices(): View
     {
-        return view('lab-services');
+        return view('lab-services')->with([
+            'packageTypes' => PackageType::all()
+        ]);
     }
 
     public function doctors(): View

@@ -14,16 +14,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::create([
-            "name" => "testuser",
-            "email" => "user@test.com",
-          "password" => Hash::make('testuser')
+        // if(count(User::all()) > 0) {
+        //     User::create([
+        //         'name' => 'testuser',
+        //         'email' => 'user@test.com',
+        //         'password' => Hash::make('testuser')
+        //     ]);
+        // }
+        $this->call([
+            CategorySeeder::class,
+            PackageCategorySeeder::class,
+            PackageTypeSeeder::class,
+            TestPackageSeeder::class,
+            LabTestSeeder::class,
+            TestEntrySeeder::class,
         ]);
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
     }
 }
