@@ -5,7 +5,7 @@
         {{-- packages --}}
         <div class="container px-0 px-lg-5 mb-5 package-container">
             <div class="py-5 text-center">
-                <h2 class="fw-bold">Choose A Package</h2>
+                <h2 class="fw-bold">{{ __('welcome.choosePackage') }}</h2>
                 <p class="fw-bold">Or Pick from the list</p>
             </div>
             <div class="row justify-content-center align-items-center package-grid">

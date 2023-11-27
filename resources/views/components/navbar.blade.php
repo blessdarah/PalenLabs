@@ -31,6 +31,9 @@
                         href="/partners">Partners</a>
                 </li>
                 <li class="nav-item fw-normal">
+                    <a class="nav-link" aria-current="page" href="/change-lang">En/Fr</a>
+                </li>
+                <li class="nav-item fw-normal">
                     <a class="nav-link {{ Request::is('medicals') ? 'active' : '' }}" aria-current="page"
                         href="/medicals">Medicals</a>
                 </li>
