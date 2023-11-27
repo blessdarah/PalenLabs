@@ -29,12 +29,13 @@ class LabTestResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name')->required(),
-                TextInput::make('shortName'),
+                TextInput::make('name')->required()->label(__('labTest.name')),
+                TextInput::make('shortName')->label(__('labTest.shortName')),
                 Select::make('category_id')->relationship('category', 'name')
                     ->preload()
-                    ->searchable(),
-                TextInput::make('description')->required(),
+                    ->searchable()
+                    ->label(__('labTest.category')),
+                TextInput::make('description')->required()->label(__('labTest.description')),
                 FileUpload::make('image')->preserveFilenames(),
             ]);
     }

@@ -27,25 +27,33 @@ class TestPackageResource extends Resource
                     ->relationship('packageType', 'name')
                     ->preload()
                     ->searchable()
+                    ->label(__('testPackage.packageType'))
                     ->required(),
                 Forms\Components\Select::make('package_category_id')
                     ->relationship('category', 'name')
                     ->preload()
+                    ->label(__('testPackage.category'))
                     ->required(),
                 Forms\Components\TextInput::make('name')
+                    ->label(__('testPackage.name'))
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('description')
                     ->required()
+                    ->label(__('testPackage.description'))
                     ->maxLength(255),
                 Forms\Components\TextInput::make('price')
                     ->required()
+                    ->label(__('testPackage.price'))
                     ->maxLength(255),
                 Forms\Components\ColorPicker::make('theme')
+                    ->label(__('testPackage.theme'))
                     ->required(),
                 Forms\Components\TextInput::make('icon')
+                    ->label(__('testPackage.icon'))
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('image')
+                    ->label(__('testPackage.image'))
                     ->image()
                     ->preserveFilenames(),
             ]);

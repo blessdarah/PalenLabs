@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\PackageTypeResource\Pages;
-use App\Filament\Resources\PackageTypeResource\RelationManagers;
-use App\Models\PackageType;
+use App\Filament\Resources\FaqResource\Pages;
+use App\Filament\Resources\FaqResource\RelationManagers;
+use App\Models\Faq;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,9 +13,9 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class PackageTypeResource extends Resource
+class FaqResource extends Resource
 {
-    protected static ?string $model = PackageType::class;
+    protected static ?string $model = Faq::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -23,30 +23,23 @@ class PackageTypeResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->label(__('packageTypes.name'))
+                Forms\Components\TextInput::make('question')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('description')
-                    ->label(__('packageTypes.description'))
-                    ->maxLength(255),
-            ]);
+                Forms\Components\Textarea::make('response')
+                    ->required()
+                    ->maxLength(500),
+            ])->columns(1);
     }
 
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
-                    ->label(__('packageTypes.name'))
+                Tables\Columns\TextColumn::make('question')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('description')
-                    ->label(__('packageTypes.description'))
+                Tables\Columns\TextColumn::make('response')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('deleted_at')
-                    ->translateLabel(shouldTranslateLabel: true)
-                    ->dateTime()
-                    ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -60,8 +53,10 @@ class PackageTypeResource extends Resource
                 Tables\Filters\TrashedFilter::make(),
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
+                Tables\Actions\ForceDeleteAction::make(),
+                Tables\Actions\RestoreAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -69,26 +64,13 @@ class PackageTypeResource extends Resource
                     Tables\Actions\ForceDeleteBulkAction::make(),
                     Tables\Actions\RestoreBulkAction::make(),
                 ]),
-            ])
-            ->emptyStateActions([
-                Tables\Actions\CreateAction::make(),
             ]);
-    }
-
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
     }
 
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListPackageTypes::route('/'),
-            'create' => Pages\CreatePackageType::route('/create'),
-            'view' => Pages\ViewPackageType::route('/{record}'),
-            'edit' => Pages\EditPackageType::route('/{record}/edit'),
+            'index' => Pages\ManageFaqs::route('/'),
         ];
     }
 

@@ -1,6 +1,6 @@
 <x-layouts.app>
     <div class="container-fluid p-0 app-banner">
-        <x-banner />
+        <x-carousel />
 
         {{-- packages --}}
         <div class="container px-0 px-lg-5 mb-5 package-container">
@@ -28,9 +28,8 @@
                                 </ul>
                                 <p class="small package-detail">
                                     A pre-wedding health screening provides you with information on health compatibility
-                                    between
-                                    couples. Get tested at home, and a doctor will analyze the results with you and your
-                                    partner.
+                                    between couples. Get tested at home, and a doctor will analyze the results with you
+                                    and your partner.
                                 </p>
                                 <button type="button" class="btn btn-primary text-white my-3">Choose Me</button>
                         </div>
@@ -55,9 +54,8 @@
                             </ul>
                             <p class="small package-detail">
                                 A pre-wedding health screening provides you with information on health compatibility
-                                between
-                                couples. Get tested at home, and a doctor will analyze the results with you and your
-                                partner.
+                                between couples. Get tested at home, and a doctor will analyze the results with you and
+                                your partner.
                             </p>
                             <button type="button" class="btn btn-warning text-white my-3">Choose Me</button>
                         </div>
@@ -237,7 +235,6 @@
             </div>
         </div>
         {{-- Questions --}}
-        <x-question></x-question>
-
+        <x-question :faqs="$faqs" />
     </div>
 </x-layouts.app>

@@ -5,8 +5,9 @@ namespace App\View\Components;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
+use App\Models\Banner;
 
-class banner extends Component
+class Carousel extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +22,8 @@ class banner extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.banner');
+        return view('components.carousel')->with([
+            'banners' => Banner::all()
+        ]);
     }
 }
