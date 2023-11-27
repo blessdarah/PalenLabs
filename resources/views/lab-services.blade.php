@@ -155,9 +155,8 @@
                                         <div class="card border-0">
                                             <div class="card-body d-flex justify-content-space-between">
                                                 <div class="card-header border-0 rounded-2 w-25 pr-2">
-
                                                 </div>
-                                                <div>
+                                                <div class="pl-2">
                                                     <h6 class="card-title">
                                                         Digital X-ray
                                                     </h6>

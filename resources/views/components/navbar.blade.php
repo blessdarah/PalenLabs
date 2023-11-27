@@ -15,10 +15,6 @@
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item fw-normal">
-                    <a class="nav-link {{ Request::is('about-us') ? 'active' : '' }}" aria-current="page"
-                        href="/about-us">About Us</a>
-                </li>
-                <li class="nav-item fw-normal">
                     <a class="nav-link {{ Request::is('lab-services') ? 'active' : '' }}" aria-current="page"
                         href="/lab-services">Lab Services</a>
                 </li>
@@ -32,10 +28,6 @@
                 </li>
                 <li class="nav-item fw-normal">
                     <a class="nav-link" aria-current="page" href="/change-lang">En/Fr</a>
-                </li>
-                <li class="nav-item fw-normal">
-                    <a class="nav-link {{ Request::is('medicals') ? 'active' : '' }}" aria-current="page"
-                        href="/medicals">Medicals</a>
                 </li>
                 <li class="nav-item fw-normal">
                     <a class="btn btn-primary text-white" role="button" aria-current="page" href="/book-a-test">Book a
