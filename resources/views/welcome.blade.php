@@ -235,6 +235,6 @@
             </div>
         </div>
         {{-- Questions --}}
-        <x-question />
+        <x-question :faqs="$faqs" />
     </div>
 </x-layouts.app>

@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
             TestPackageSeeder::class,
             LabTestSeeder::class,
             TestEntrySeeder::class,
+            FaqSeeder::class,
         ]);
     }
 }

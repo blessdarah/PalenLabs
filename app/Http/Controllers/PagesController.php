@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Faq;
 use App\Models\PackageType;
 use App\Models\TestPackage;
 use Illuminate\Http\Request;
@@ -11,7 +12,9 @@ class PagesController extends Controller
 {
     public function index(): View
     {
-        return view('welcome');
+        return view('welcome')->with([
+            'faqs' => Faq::all()
+        ]);
     }
 
     public function labTests(): View

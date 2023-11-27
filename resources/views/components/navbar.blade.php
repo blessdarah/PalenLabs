@@ -38,6 +38,15 @@
                     <a class="btn btn-primary text-white" role="button" aria-current="page" href="/book-a-test">Book a
                         Test</a>
                 </li>
+                <li class="nav-item fw-normal">
+                    @auth
+                        <a class="btn btn-success text-white ml-2" role="button" aria-current="page"
+                            href="/admin">Dashboard</a>
+                    @else
+                        <a class="btn btn-danger text-white ml-2" role="button" aria-current="page"
+                            href="/admin">Login</a>
+                    @endauth
+                </li>
             </ul>
             {{-- <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
