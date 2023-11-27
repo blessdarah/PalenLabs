@@ -27,10 +27,10 @@ class CategoryResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name')->required()->maxLength(50),
+                TextInput::make('name')->required()->maxLength(50)->label(__('testCategory.name')),
                 Select::make('parent_id')
                     ->relationship('parent', 'name')
-                    ->label("Parent category")
+                    ->label(__('testCategory.parent'))
                     ->preload(),
             ]);
     }
@@ -39,8 +39,8 @@ class CategoryResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name'),
-                TextColumn::make('parent.name')->label("Parent")
+                TextColumn::make('name')->label(__('testCategory.name')),
+                TextColumn::make('parent.name')->label(__('testCategory.parent'))
             ])
             ->filters([
                 Tables\Filters\TrashedFilter::make(),

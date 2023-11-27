@@ -13,10 +13,13 @@ return new class () extends Migration {
         Schema::create('lab_tests', function (Blueprint $table) {
             $table->id();
             $table->foreignId('category_id');
+
             $table->string('name');
             $table->string('shortName')->nullable();
             $table->string('description');
+            $table->float('price');
             $table->string('image')->nullable();
+
             $table->softDeletes();
             $table->timestamps();
         });

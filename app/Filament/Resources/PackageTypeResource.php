@@ -24,9 +24,11 @@ class PackageTypeResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
+                    ->label(__('packageTypes.name'))
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('description')
+                    ->label(__('packageTypes.description'))
                     ->maxLength(255),
             ]);
     }
@@ -36,10 +38,13 @@ class PackageTypeResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
+                    ->label(__('packageTypes.name'))
                     ->searchable(),
                 Tables\Columns\TextColumn::make('description')
+                    ->label(__('packageTypes.description'))
                     ->searchable(),
                 Tables\Columns\TextColumn::make('deleted_at')
+                    ->translateLabel(shouldTranslateLabel: true)
                     ->dateTime()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
@@ -69,14 +74,14 @@ class PackageTypeResource extends Resource
                 Tables\Actions\CreateAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -85,8 +90,8 @@ class PackageTypeResource extends Resource
             'view' => Pages\ViewPackageType::route('/{record}'),
             'edit' => Pages\EditPackageType::route('/{record}/edit'),
         ];
-    }    
-    
+    }
+
     public static function getEloquentQuery(): Builder
     {
         return parent::getEloquentQuery()
