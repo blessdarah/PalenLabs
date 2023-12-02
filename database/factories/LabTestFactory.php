@@ -23,8 +23,6 @@ class LabTestFactory extends Factory
             'shortName' => $this->faker->word,
             'description' => $this->faker->sentence,
             'price' => $this->faker->randomFloat(nbMaxDecimals: 2),
-            // 'icon' => $this->faker->word,
-            // 'image' => $this->faker->imageUrl
         ];
     }
 }
