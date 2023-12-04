@@ -22,7 +22,7 @@ class LabTestFactory extends Factory
             'category_id' => Category::inRandomOrder()->first()->id,
             'shortName' => $this->faker->word,
             'description' => $this->faker->sentence,
-            'price' => $this->faker->randomFloat(nbMaxDecimals: 2),
+            'price' => 500.0,
             // 'icon' => $this->faker->word,
             // 'image' => $this->faker->imageUrl
         ];
