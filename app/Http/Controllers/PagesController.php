@@ -30,6 +30,15 @@ class PagesController extends Controller
         ]);
     }
 
+    public function showLabService(int $id): View
+    {
+        $packageType = PackageType::find($id);
+        return view('lab-service-detail')
+            ->with([
+                'packageType' => $packageType
+            ]);
+    }
+
     public function doctors(): View
     {
         return view('doctors');
