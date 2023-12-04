@@ -75,7 +75,6 @@
                                                                                 ({{ $testEntry->labTest->shortName }})
                                                                             </li>
                                                                         @endforeach
-
                                                                     </ul>
 
                                                                     <button type="button"

@@ -31,7 +31,8 @@
                                     between couples. Get tested at home, and a doctor will analyze the results with you
                                     and your partner.
                                 </p>
-                                <button type="button" class="btn btn-primary text-white my-3">Choose Me</button>
+                                <a href="{{ route('pages.labServices.show', 1) }}" type="button"
+                                    class="btn btn-primary text-white my-3">Choose Me</a>
                         </div>
                     </div>
                 </div>

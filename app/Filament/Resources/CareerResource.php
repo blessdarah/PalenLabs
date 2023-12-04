@@ -28,12 +28,11 @@ class CareerResource extends Resource
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('image')
                     ->image(),
-                Forms\Components\Textarea::make('description')
+                Forms\Components\RichEditor::make('description')
                     ->required()
                     ->columnSpanFull(),
                 Forms\Components\DatePicker::make('deadline')
                     ->required(),
-                Forms\Components\DatePicker::make('published_on'),
             ]);
     }
 

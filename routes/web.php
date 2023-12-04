@@ -26,6 +26,7 @@ Route::get('/change-lang', function(){
 Route::controller(PagesController::class)->group(function () {
     Route::get('/', 'index');
     Route::get('/lab-services', 'labServices');
+    Route::get('/lab-services/{id}', 'showLabService')->name('pages.labServices.show');
     Route::get('/doctors', 'doctors');
     Route::get('/partners', 'partners');
     Route::get('/about-us', 'aboutUs');
