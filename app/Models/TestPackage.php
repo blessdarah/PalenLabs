@@ -23,7 +23,8 @@ class TestPackage extends Model
        "image",
        "package_category_id",
        "package_type_id",
-       "comment"
+       "comment",
+       "is_public"
     ];
 
     public function packageType(): BelongsTo

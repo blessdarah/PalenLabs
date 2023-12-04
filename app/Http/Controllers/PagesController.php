@@ -13,7 +13,8 @@ class PagesController extends Controller
     public function index(): View
     {
         return view('welcome')->with([
-            'faqs' => Faq::all()
+            'faqs' => Faq::all(),
+            'testPackages' => TestPackage::where('is_public', true)
         ]);
     }
 
