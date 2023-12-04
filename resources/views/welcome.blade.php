@@ -3,7 +3,7 @@
         <x-carousel />
 
         {{-- packages --}}
-        <div class="container px-0 px-lg-5 mb-5 package-container">
+        <div class="container mb-5 package-container">
             <div class="py-5 text-center">
                 <h2 class="fw-bold">{{ __('welcome.choosePackage') }}</h2>
                 <p class="fw-bold">Or Pick from the list</p>
@@ -92,6 +92,15 @@
                     <a href="/packages" class="btn btn-primary px-4 py-2 text-white fw-bold">Packages Details <i
                             class="bi bi-arrow-down"></i></a>
                 </div>
+                <div class="package-logo">
+                    <img src="{{ asset('palen-health/palen-icon.png') }}" class="img-fluid" alt="">
+                </div>
+                <div class="package-logo-large">
+                    <img src="{{ asset('palen-health/palen-icon.png') }}" class="img-fluid" alt="">
+                </div>
+                <div class="package-logo-8">
+                    <img src="{{ asset('palen-health/group-8.png') }}" class="img-fluid" alt="">
+                </div>
             </div>
         </div>
 
@@ -162,9 +171,9 @@
                 <div class="row justify-content-center align-items-center">
                     <div class="col-12 col-md-4 mb-3 partner-media">
                         <div class="partner-overlay">
-                            <div class="gallery">
-                                <img src="{{ asset('palen-health/amisom-7.jpeg') }}" class="img-fluid" alt="">
-                            </div>
+                        </div>
+                        <div class="gallery">
+                            <img src="{{ asset('palen-health/amisom-7.jpeg') }}" class="img-fluid" alt="">
                         </div>
                     </div>
                     <div class="col-12 col-md-8 mb-3">
@@ -232,6 +241,13 @@
                         </div>
                     </div>
                 </div>
+
+            </div>
+            <div class="package-logo">
+                <img src="{{ asset('palen-health/palen-icon.png') }}" class="img-fluid" alt="">
+            </div>
+            <div class="package-logo-small">
+                <img src="{{ asset('palen-health/palen-icon.png') }}" class="img-fluid" alt="">
             </div>
         </div>
         {{-- Questions --}}
