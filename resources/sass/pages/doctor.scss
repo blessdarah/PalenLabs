@@ -40,6 +40,47 @@
 }
 .learn-more-container {
     background: $dark-blue;
+    position: relative;
+    overflow: hidden;
+}
+
+.doctors-grid {
+    position: relative;
+    width: 300px;
+    // overflow: hidden;
+    .doctor-img-item {
+        &:nth-child(2) {
+            position: relative;
+            left: -3rem;
+        }
+        &:nth-child(3) {
+            position: absolute;
+            transform: rotate(-17.63deg);
+            transform-origin: 0 0;
+            right: -10rem;
+            bottom: -5rem;
+            display: flex;
+            width: 260px;
+            height: 310px;
+            -webkit-clip-path: polygon(
+                50% 0%,
+                100% 25%,
+                100% 75%,
+                50% 100%,
+                0% 75%,
+                0% 25%
+            );
+            clip-path: polygon(
+                50% 0%,
+                100% 25%,
+                100% 75%,
+                50% 100%,
+                0% 75%,
+                0% 25%
+            );
+            object-fit: cover;
+        }
+    }
 }
 @media screen and (min-width: 768px) {
     .doctors-banner {
@@ -58,7 +99,6 @@
                         width: 60%;
                         top: 30%;
                         left: 8%;
-                        
                     }
                 }
             }
