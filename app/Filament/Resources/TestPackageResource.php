@@ -52,6 +52,8 @@ class TestPackageResource extends Resource
                 Forms\Components\TextInput::make('icon')
                     ->label(__('testPackage.icon'))
                     ->maxLength(255),
+                Forms\Components\Toggle::make('is_public')
+                    ->label(__('testPackage.isPublic')),
                 Forms\Components\FileUpload::make('image')
                     ->label(__('testPackage.image'))
                     ->image()
