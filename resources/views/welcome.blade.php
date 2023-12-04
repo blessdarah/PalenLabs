@@ -9,7 +9,7 @@
                 <p class="fw-bold">Or Pick from the list</p>
             </div>
             <div class="row justify-content-center align-items-center package-grid">
-                <div class="col-10 col-md-3 mb-3 package-grid-item">
+                <div class="col-10 col-md-4 mb-3 package-grid-item">
                     <div class="card package-card">
                         <div class="card-header">
                             <div class="card-icon">
@@ -35,7 +35,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-10 col-md-3 mb-3 package-grid-item">
+                <div class="col-10 col-md-4 mb-3 package-grid-item">
                     <div class="card package-card">
                         <div class="card-header">
                             <div class="card-icon bg-warning">
@@ -61,7 +61,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-10 col-md-3 mb-3 package-grid-item">
+                <div class="col-10 col-md-4 mb-3 package-grid-item">
                     <div class="card package-card">
                         <div class="card-header">
                             <div class="card-icon bg-purple">
@@ -98,7 +98,7 @@
         {{-- reviews --}}
         <div class="container px-0 px-lg-5 mb-5 review-container">
             <div class="row justify-content-center align-items-center review-grid">
-                <div class="col-12 col-md-3 mb-3 review-grid-item">
+                <div class="col-12 col-md-4 mb-3 review-grid-item">
                     <div class="card border-0 review-card">
                         <div class="d-flex justify-content-center">
                             <div class="card-header bg-white border-0">
@@ -115,7 +115,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-3 mb-3 review-grid-item">
+                <div class="col-12 col-md-4 mb-3 review-grid-item">
                     <div class="card border-0 review-card">
                         <div class="d-flex justify-content-center">
                             <div class="card-header bg-white border-0">
@@ -132,7 +132,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-3 mb-3 review-grid-item">
+                <div class="col-12 col-md-4 mb-3 review-grid-item">
                     <div class="card border-0 review-card">
                         <div class="d-flex justify-content-center">
                             <div class="card-header bg-white border-0">
@@ -167,7 +167,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 mb-3">
+                    <div class="col-12 col-md-8 mb-3">
                         <div class="row justify-content-center align-items-center partner-grid">
                             <div class="col-12 mb-3 partner-grid-item">
                                 <div class="card border-0 partner-card">

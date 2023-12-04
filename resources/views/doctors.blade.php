@@ -11,7 +11,7 @@
             </div>
 
             @for ($i = 0; $i < 4; $i++)
-                <div class="col-10 col-md-5 mb-3">
+                <div class="col-10 col-md-6 mb-3">
                     <div class="card border-0 untitled-card">
                         <div class="d-flex justify-content-center">
                             <div class="card-header bg-white border-0">
@@ -32,16 +32,32 @@
         </div>
     </div>
 
-    <div class="container-fuild">
-        <div class="row justify-content-center align-items-center learn-more-container p-5">
-            <div class="col-10 col-md-5 text-left">
+    <div class="container-fuild learn-more-container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-10 col-md-8 p-5">
                 <h3 class="display-6 fw-bold text-white mb-3">Do you want to learn more about Us?</h3>
                 <a href="/about-us" class="btn btn-primary text-white">About Us <i
                         class="bi bi-arrow-right-short"></i></a>
             </div>
-            <div class="col-10 col-md-5"></div>
+            <div class="col-10 col-md-4">
+                <div class="doctors-grid">
+                    <div class="doctor-img-item">
+                        <img src="{{ asset('palen-health/doctor-3.png') }}" class="img-fluid" alt="">
+                    </div>
+                    <div class="doctor-img-item">
+                        <img src="{{ asset('palen-health/doctor-1.png') }}" class="img-fluid" alt="">
+
+                    </div>
+                    <div class="doctor-img-item">
+                        <img src="{{ asset('palen-health/doctor-2.png') }}" class="img-fluid" alt="">
+
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
+
 
     {{-- Questions --}}
     <x-question></x-question>

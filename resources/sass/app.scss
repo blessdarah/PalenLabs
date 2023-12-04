@@ -18,6 +18,11 @@
 @import "pages/doctor.scss";
 @import "pages/partner.scss";
 
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 17px;
+}
 .app-container {
     min-height: 70vh;
     background: $white;

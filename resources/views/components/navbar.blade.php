@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm p-0">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="{{ asset('PNG/Palen Diagnostics_Color Logo.png') }}" alt="" width="140" height="55">
+        <a class="navbar-brand" href="{{ url('/') }}" style="margin-right: 0;">
+            <img src="{{ asset('PNG/Palen Diagnostics_Color Logo.png') }}" alt="" width="180" height="70">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

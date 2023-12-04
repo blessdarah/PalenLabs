@@ -6,7 +6,7 @@
         </div>
 
         <div class="row justify-content-center align-items center">
-            <div class="col-12 col-md-6 mb-3">
+            <div class="col-12 col-md-10 mb-3">
                 <div class="accordion accordion-flush" id="accordionFlushExample">
                     @foreach ($faqs as $faq)
                         <div class="accordion-item mb-2 border-0">
