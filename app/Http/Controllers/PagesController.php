@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Faq;
+use App\Models\LabTest;
 use App\Models\PackageType;
 use App\Models\TestPackage;
 use Illuminate\Http\Request;
@@ -26,7 +27,8 @@ class PagesController extends Controller
     public function labServices(): View
     {
         return view('lab-services')->with([
-            'packageTypes' => PackageType::all()
+            'packageTypes' => PackageType::all(),
+            'tests' => LabTest::all()
         ]);
     }
 
