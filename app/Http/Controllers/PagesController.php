@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Career;
 use App\Models\Faq;
 use App\Models\LabTest;
 use App\Models\PackageType;
@@ -54,5 +55,10 @@ class PagesController extends Controller
     public function aboutUs(): View
     {
         return view('about-us');
+    }
+
+    public function careers(): View
+    {
+        return view('careers')->with('careers', Career::all());
     }
 }

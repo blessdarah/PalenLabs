@@ -30,6 +30,7 @@ Route::controller(PagesController::class)->group(function () {
     Route::get('/doctors', 'doctors');
     Route::get('/partners', 'partners');
     Route::get('/about-us', 'aboutUs');
+    Route::get('/careers', 'careers')->name('pages.careers');
 })->middleware('language');
 
 require __DIR__ . '/auth.php';
