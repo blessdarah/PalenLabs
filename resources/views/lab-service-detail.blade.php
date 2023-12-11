@@ -1,5 +1,5 @@
 <x-layouts.app>
-    <div class="partners mb-5">
+    <div>
         <div class="container untitled-container bg-white p-5">
             <div class="row justify-content-center align-items-center">
                 <div class="col-12 py-4 text-center">

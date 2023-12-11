@@ -117,25 +117,22 @@
                             </div>
                         </div>
                         <div class="tab-pane fade p-3" id="test" role="tabpanel" aria-labelledby="test-tab">
-                            Lorem
-                            ipsum
-                            dolor
-                            sit amet consectetur adipisicing elit. Vero ipsa dolorem repellendus ducimus eos fugit minus
-                            aperiam
-                            sit
-                            accusantium architecto sed tenetur consequuntur at, facere id, deserunt voluptatem possimus
-                            nobis
-                            optio
-                            natus, debitis nam dignissimos. Placeat error accusamus beatae officia, soluta corporis
-                            blanditiis
-                            veniam alias exercitationem molestiae amet quibusdam ducimus quas tenetur obcaecati natus
-                            ad.
-                            Quisquam
-                            voluptatem pariatur ullam repellendus iusto! Ipsum numquam id excepturi accusamus saepe
-                            nostrum
-                            vitae,
-                            assumenda dignissimos eos rem sapiente quasi distinctio, quo autem cupiditate earum!</div>
-                        <div class="tab-pane fade p-3" id="ultrasound" role="tabpanel" aria-labelledby="ultrasound-tab">
+                            <ul class="labtests">
+                                @foreach ($tests as $test)
+                                    <li class="labtest-card">
+                                        <div>
+                                            <img src="{{ $test->image }}" alt="Test image">
+                                        </div>
+                                        <div>
+                                            <h4>{{ $test->name }}</h4>
+                                            <p>{{ $test->description }}</p>
+                                        </div>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade p-3" id="ultrasound" role="tabpanel"
+                            aria-labelledby="ultrasound-tab">
                             Lorem
                             ipsum
                             dolor
