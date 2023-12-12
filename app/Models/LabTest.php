@@ -22,6 +22,15 @@ class LabTest extends Model
        "image",
     ];
 
+    public function scopeScans($query)
+    {
+        return $query->where('category_id', 2);
+    }
+
+    public function scopeXrays($query)
+    {
+        return $query->where('category', 3);
+    }
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
