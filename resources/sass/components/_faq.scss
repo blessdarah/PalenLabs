@@ -1,0 +1,15 @@
+.question-container {
+    position: relative;
+    .package-logo-8 {
+        position: absolute;
+        bottom: -1rem;
+        right: 80px;
+        opacity: 0.2;
+
+        img {
+            width: 180px;
+            height: 200px;
+            transform-origin: 0 0;
+        }
+    }
+}

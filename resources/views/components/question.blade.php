@@ -1,4 +1,4 @@
-<div class="question-container">
+<div class="question-container mb-5">
     <div class="container px-0 px-lg-5 pb-5">
         <div class="py-5 text-center">
             <h2 class="fw-bold text-primary">Any Question?</h2>
@@ -6,7 +6,7 @@
         </div>
 
         <div class="row justify-content-center align-items center">
-            <div class="col-12 col-md-10 mb-3">
+            <div class="col-12 col-md-8 mb-3">
                 <div class="accordion accordion-flush" id="accordionFlushExample">
                     @foreach ($faqs as $faq)
                         <div class="accordion-item mb-2 border-0">
@@ -26,6 +26,10 @@
                     @endforeach
                 </div>
             </div>
+        </div>
+
+        <div class="package-logo-8">
+            <img src="{{ asset('palen-health/group-8.png') }}" class="img-fluid" alt="">
         </div>
     </div>
 </div>
