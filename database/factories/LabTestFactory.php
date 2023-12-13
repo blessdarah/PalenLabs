@@ -18,11 +18,11 @@ class LabTestFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->word,
+            'name' => fake()->word,
             'category_id' => Category::inRandomOrder()->first()->id,
-            'shortName' => $this->faker->word,
-            'description' => $this->faker->sentence,
-            'price' => $this->faker->randomFloat(nbMaxDecimals: 2),
+            'shortName' => fake()->word,
+            'description' => fake()->sentence
+            'price' => fake()->randomFloat(nbMaxDecimals: 2, max: 10000)
         ];
     }
 }
