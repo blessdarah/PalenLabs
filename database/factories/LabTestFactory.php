@@ -21,7 +21,7 @@ class LabTestFactory extends Factory
             'name' => fake()->word,
             'category_id' => Category::inRandomOrder()->first()->id,
             'shortName' => fake()->word,
-            'description' => fake()->sentence
+            'description' => fake()->sentence,
             'price' => fake()->randomFloat(nbMaxDecimals: 2, max: 10000)
         ];
     }
