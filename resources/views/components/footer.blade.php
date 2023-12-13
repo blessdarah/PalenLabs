@@ -50,7 +50,14 @@
             </div>
         </div>
 
-        <div class="d-flex flex-column align-items-center justify-content-center py-4 my-4 border-top">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="text-white border-top w-100"></div>
+            <div class="package-logo-small px-5">
+                <img src="{{ asset('palen-health/palen-icon.png') }}" height="130px" width="130px" class="img-fluid" alt="">
+            </div>
+            <div class="text-white border-top w-100"></div>
+        </div>
+        <div class="d-flex flex-column align-items-center justify-content-center pb-4 mb-4">
             <p style="text-align: center;">© 2023 Palen Health. All rights reserved.</p>
             <ul class="list-unstyled d-flex">
                 <li class="ms-3 rounded-circle px-1" style="background: #3d3d3d"><a class="link-body-emphasis"

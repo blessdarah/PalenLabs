@@ -33,8 +33,8 @@
     </div>
 
     <div class="container-fuild learn-more-container">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-10 col-md-8 p-5">
+        <div class="row justify-content-end align-items-center">
+            <div class="col-10 col-md-6 p-5">
                 <h3 class="display-6 fw-bold text-white mb-3">Do you want to learn more about Us?</h3>
                 <a href="/about-us" class="btn btn-primary text-white">About Us <i
                         class="bi bi-arrow-right-short"></i></a>
