@@ -20,8 +20,9 @@ Route::get('/change-lang', function(){
     }else {
         session(['language' => 'en']);
     }
+    // dd(session()->get('language'));
     return redirect()->back()->with('language', session('language'));
-})->middleware('language');
+});
 
 Route::controller(PagesController::class)->group(function () {
     Route::get('/', 'index');

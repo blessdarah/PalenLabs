@@ -133,40 +133,25 @@
                         </div>
                         <div class="tab-pane fade p-3" id="ultrasound" role="tabpanel"
                             aria-labelledby="ultrasound-tab">
-                            Lorem
-                            ipsum
-                            dolor
-                            sit amet consectetur adipisicing elit. Animi cum debitis recusandae sequi dicta numquam
-                            deleniti
-                            voluptate soluta modi dolor, ut totam dolorum ipsam optio possimus suscipit natus enim error
-                            deserunt in
-                            minima nihil eaque! At nulla temporibus dolorem, ullam voluptatem fugit assumenda quo
-                            corporis
-                            tempore
-                            dolor, quam ex necessitatibus.</div>
+                            <ul>
+                                {{-- pull all tests that are scans --}}
+                                @foreach (\App\Models\LabTest::where('category_id', 2)->get() as $scan)
+                                    <li>
+                                        <strong>{{ $scan->name }}</strong>
+                                        <p>{{ $scan->description }}</p>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
                         <div class="tab-pane fade p-3" id="x-ray" role="tabpanel" aria-labelledby="x-ray-tab">
-                            <div class="row justify-content-center align-items-start">
-                                @for ($i = 0; $i < 8; $i++)
-                                    <div class="col-12 col-md-6">
-                                        <div class="card border-0">
-                                            <div class="card-body d-flex justify-content-space-between">
-                                                <div class="card-header border-0 rounded-2 w-25 pr-2">
-                                                </div>
-                                                <div class="pl-2">
-                                                    <h6 class="card-title">
-                                                        Digital X-ray
-                                                    </h6>
-                                                    <p>
-                                                        Sportsman do offending supported extremity breakfast by
-                                                        listening.
-                                                        Decisively advantages nor expression unpleasing she led met
-                                                    </p>
-                                                    <a href="#" class="nav-link text-primary">learn more</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endfor
+                            <div class="row justify-content-center align-items-start px-lg-5">
+                                {{-- pull all tests that are xrays --}}
+                                @foreach (\App\Models\LabTest::where('category_id', 3)->get() as $scan)
+                                    <li>
+                                        <strong>{{ $scan->name }}</strong>
+                                        <p>{{ $scan->description }}</p>
+                                    </li>
+                                @endforeach
                             </div>
                         </div>
                     </div>
