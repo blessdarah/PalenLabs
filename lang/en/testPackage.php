@@ -9,5 +9,5 @@ return [
     'theme' => 'Theme',
     'icon' => 'Icon',
     'image' => 'Image',
-    'isPublic' => 'Check to show on landing page.',
+    'is_public' => 'Check to show on landing page.',
 ];
