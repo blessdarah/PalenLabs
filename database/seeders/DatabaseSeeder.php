@@ -14,13 +14,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // if(count(User::all()) > 0) {
-        //     User::create([
-        //         'name' => 'testuser',
-        //         'email' => 'user@test.com',
-        //         'password' => Hash::make('testuser')
-        //     ]);
-        // }
+        if(User::all()->count() < 1) {
+            User::create([
+                'name' => 'testuser',
+                'email' => 'user@test.com',
+                'password' => Hash::make('testuser')
+            ]);
+        }
         $this->call([
             CategorySeeder::class,
             PackageCategorySeeder::class,
