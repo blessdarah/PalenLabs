@@ -1,7 +1,7 @@
-@if ($banners->count() > 0)
+@if (\App\Models\Banner::all()->count() > 0)
     <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
-            @foreach ($banners as $banner)
+            @foreach (\App\Models\Banner::all() as $banner)
                 <div class="carousel-item active">
                     <img src="{{ asset('/storage/' . $banner->image) }}" class="d-block w-100" alt="Carousel image" />
                     <div class="carousel-caption d-md-block">
