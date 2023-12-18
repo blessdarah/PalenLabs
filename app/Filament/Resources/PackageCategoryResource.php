@@ -17,7 +17,7 @@ class PackageCategoryResource extends Resource
 {
     protected static ?string $model = PackageCategory::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-check-badge';
 
     public static function form(Form $form): Form
     {
@@ -65,14 +65,14 @@ class PackageCategoryResource extends Resource
                 Tables\Actions\CreateAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -81,8 +81,8 @@ class PackageCategoryResource extends Resource
             'view' => Pages\ViewPackageCategory::route('/{record}'),
             'edit' => Pages\EditPackageCategory::route('/{record}/edit'),
         ];
-    }    
-    
+    }
+
     public static function getEloquentQuery(): Builder
     {
         return parent::getEloquentQuery()
