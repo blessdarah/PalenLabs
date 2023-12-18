@@ -33,7 +33,7 @@ class PagesController extends Controller
         ]);
     }
 
-    public function showLabService(int $id): View
+    public function showLabService(string $locale, int $id): View
     {
         $packageType = PackageType::find($id);
         return view('lab-service-detail')

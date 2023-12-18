@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm p-0">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}" style="margin-right: 0;">
+        <a class="navbar-brand" href="{{ route('pages.index') }}" style="margin-right: 0;">
             <img src="{{ asset('PNG/Palen Diagnostics_Color Logo.png') }}" alt="" width="180" height="70">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -8,27 +8,28 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Left Side Of Navbar -->
-            {{-- <ul class="navbar-nav me-auto">
-                    </ul> --}}
-
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item fw-normal">
-                    <a class="nav-link {{ Request::is('lab-services') ? 'active' : '' }}" aria-current="page"
-                        href="/lab-services">Lab Services</a>
+                    <a class="nav-link {{ Request::is('pages.labServices') ? 'active' : '' }}" aria-current="page"
+                        href="{{ route('pages.labServices') }}">Lab Services</a>
                 </li>
                 <li class="nav-item fw-normal">
-                    <a class="nav-link {{ Request::is('doctors') ? 'active' : '' }}" aria-current="page"
-                        href="/doctors">Doctors</a>
+                    <a class="nav-link {{ Request::is('pages.doctors') ? 'active' : '' }}" aria-current="page"
+                        href="{{ route('pages.doctors') }}">Doctors</a>
                 </li>
                 <li class="nav-item fw-normal">
-                    <a class="nav-link {{ Request::is('partners') ? 'active' : '' }}" aria-current="page"
-                        href="/partners">Partners</a>
+                    <a class="nav-link {{ Request::is('pages.partners') ? 'active' : '' }}" aria-current="page"
+                        href="{{ route('pages.partners') }}">Partners</a>
                 </li>
-                <li class="nav-item fw-normal">
-                    <a class="nav-link" aria-current="page" href="/change-lang">En/Fr</a>
-                </li>
+                @foreach (config('app.available_locales') as $locale)
+                    <li class="nav-item fw-normal">
+                        <a class="nav-link" aria-current="page"
+                            href="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), array_merge(Route::current()->parameters(), ['locale' => $locale])) }}">
+                            {{ $locale }}
+                        </a>
+                    </li>
+                @endforeach
                 <li class="nav-item fw-normal">
                     <a class="btn btn-primary text-white" role="button" aria-current="page" href="/book-a-test">Book a
                         Test</a>

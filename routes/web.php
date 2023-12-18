@@ -1,8 +1,8 @@
 <?php
 
 use App\Http\Controllers\PagesController;
-use Illuminate\Contracts\Session\Session;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,24 +14,27 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/change-lang', function(){
-    if(app()->getLocale() == 'en' || app()->getLocale() == null) {
-        session(['language' => 'fr']);
-    }else {
-        session(['language' => 'en']);
-    }
-    // dd(session()->get('language'));
-    return redirect()->back()->with('language', session('language'));
+Route::get('/change-lang/{lang}', function(string $lang){
+    Session::put('language', $lang);
+    return redirect()->back()->with('language', $lang);
 });
 
-Route::controller(PagesController::class)->group(function () {
-    Route::get('/', 'index');
-    Route::get('/lab-services', 'labServices');
-    Route::get('/lab-services/{id}', 'showLabService')->name('pages.labServices.show');
-    Route::get('/doctors', 'doctors');
-    Route::get('/partners', 'partners');
-    Route::get('/about-us', 'aboutUs');
-    Route::get('/careers', 'careers')->name('pages.careers');
-})->middleware('language');
+Route::prefix('{locale}')
+    ->where(['locale' => '[a-zA-Z]{2}'])
+    ->middleware('language')
+    ->group(function(){
+        Route::controller(PagesController::class)->group(function () {
+            Route::get('/', 'index')->name('pages.index');
+            Route::get('/lab-services', 'labServices')->name('pages.labServices');
+            Route::get('/lab-services/{id}', 'showLabService')->name('pages.labServices.show');
+            Route::get('/doctors', 'doctors')->name('pages.doctors');
+            Route::get('/partners', 'partners')->name('pages.partners');
+            Route::get('/about-us', 'aboutUs')->name('pages.aboutUs');
+            Route::get('/careers', 'careers')->name('pages.careers');
+        });
+});
 
+Route::get('/', function () {
+    return redirect(app()->getLocale());
+});
 require __DIR__ . '/auth.php';
