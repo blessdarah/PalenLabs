@@ -18,16 +18,8 @@ class LanguageMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // $language = Session::get('language');
-        // if(!$language) {
-        //     $language = config('app.locale');
-        // }
-        //
-        // App::setLocale($language);
         app()->setLocale($request->segment(1));
-
         URL::defaults(['locale' => $request->segment(1)]);
-        // dd($language);
         return $next($request);
     }
 }

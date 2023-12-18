@@ -24,6 +24,7 @@ class LabTestResource extends Resource
     protected static ?string $model = LabTest::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-beaker';
+    protected static ?string $navigationGroup = 'lab';
 
     public static function form(Form $form): Form
     {

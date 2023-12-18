@@ -18,6 +18,7 @@ class PackageCategoryResource extends Resource
     protected static ?string $model = PackageCategory::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-check-badge';
+    protected static ?string $navigationGroup = 'lab';
 
     public static function form(Form $form): Form
     {

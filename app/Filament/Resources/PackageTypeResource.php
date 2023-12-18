@@ -18,6 +18,7 @@ class PackageTypeResource extends Resource
     protected static ?string $model = PackageType::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-queue-list';
+    protected static ?string $navigationGroup = 'lab';
 
     public static function form(Form $form): Form
     {

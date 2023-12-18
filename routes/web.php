@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Session;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/change-lang/{lang}', function(string $lang){
-    Session::put('language', $lang);
-    return redirect()->back()->with('language', $lang);
+
+Route::get('/', function () {
+    return redirect(app()->getLocale() ?? 'en');
 });
 
 Route::prefix('{locale}')
@@ -34,7 +34,4 @@ Route::prefix('{locale}')
         });
 });
 
-Route::get('/', function () {
-    return redirect(app()->getLocale());
-});
 require __DIR__ . '/auth.php';
